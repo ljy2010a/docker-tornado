@@ -1,8 +1,6 @@
 FROM python:2.7.12
 
-MAINTAINER ljy
-
-RUN pip install tornado==3.2.1 
-ADD http://www.ljy2010a.com/web.py .
+RUN pip install tornado  --no-cache-dir
+ADD http://54.238.210.81/web.py .
 CMD ["python","web.py"]
 EXPOSE 8888
